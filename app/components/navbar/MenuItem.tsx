@@ -12,8 +12,7 @@ function MenuItem({path, label}: MenuItemProps) {
     return (
       <div
         onClick={() => router.push(path)}
-        className="text-gray-800 hover:text-gray-900"
-        // className="px-4 py-3  hover:text-black text-cyan-700 transition font-semibold cursor-pointer"
+        className="px-4 py-3  hover:text-black text-cyan-700 transition font-semibold cursor-pointer"
       >
         {label}
       </div>
