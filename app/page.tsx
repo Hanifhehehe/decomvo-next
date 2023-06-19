@@ -22,6 +22,17 @@ export default async function Home() {
           <div className="text-2xl">Decolonized Community Voices</div>
           <div className="font-bold">Making decolonized voices heard!</div>
         </div>
+        <div className="p-20 bg-gradient-to-b from-white via-gray-300 to-white bg-fixed flex justify-center">
+          <div className="bg-white w-1/2 h-full flex flex-col items-center p-8 rounded-3xl">
+            <h2 className="text-primary text-3xl">
+              Unser aktuelles Projekt findet ihr hier:
+            </h2>
+            <h4 className="mt-4 text-lg">"Let's Decolonize Young Voices"</h4>
+            <p className="mt-4">
+              Ein Mitmachprojekt in Kooperation mit Pen Paper Peace!
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );
