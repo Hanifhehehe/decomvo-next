@@ -7,7 +7,7 @@ import ExitIcon from "./ExitIcon";
 import Logo from "../Logo";
 
 function NavbarMenu() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <div>
       <div className="hidden md:flex-row md:flex">
@@ -19,7 +19,7 @@ function NavbarMenu() {
       <div className="md:hidden">
         <HamburgerIcon action={() => setIsOpen(!isOpen)} />
         <div
-          className={`absolute w-3/4 h-screen shadow-sm bg-white p-10 top-0 transition-all duration-500 ${
+          className={`absolute w-3/4 h-screen shadow-xl border-l-2 bg-white p-10 top-0 transition-all duration-500 pl-20 ${
             isOpen
               ? 'right-[-747px]'
               : 'right-0'
