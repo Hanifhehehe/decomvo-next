@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   if (!notionSecret || !notionDatabaseId)
     throw new Error("Invalid notion secret or notion database id specified!");
 
-  const response = await notion.databases.query({
+  const getData = await notion.databases.query({
     database_id: notionDatabaseId,
     filter: {
       property: "Status",
@@ -31,9 +31,17 @@ export async function GET(request: Request) {
   });
 
   // @ts-ignore
-  const data = response.results.map((pages) => pages.properties.Name.title[0].text.content);
+  const data = getData.results.map((pages) => pages.properties.Name.title[0].text.content);
 
-  console.log(data);
+  const pageId = getData.results[2].id
+  // const getPage = await notion.pages.retrieve({page_id: pageId})
+
+  const getBlocks = await notion.blocks.retrieve({block_id: pageId})
+
+  // console.log(getPage)
+  console.log("Start")
+  console.log(getBlocks)
+  console.log("Done")
 
   return NextResponse.json(data);
 }

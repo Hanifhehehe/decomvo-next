@@ -33,7 +33,7 @@ export async function GET(request: Request) {
   // @ts-ignore
   const data = response.results.map( pages => pages.properties.Name.title[0].text.content)
 
-  console.log(data)
+  console.log()
 
   return NextResponse.json(data);
 }
