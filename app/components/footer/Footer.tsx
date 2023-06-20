@@ -1,29 +1,29 @@
-import Link from 'next/link';
-import React from 'react'
-import MenuItem from '../navbar/MenuItem';
-import Container from '../Container';
-import Logo from '../Logo';
+import MenuItem from "../navbar/MenuItem";
+import Logo from "../Logo";
 
 function Footer() {
   return (
-    <Container>
-        <div className='flex flex-col justify-between md:flex-row'>
-            <div className='justify-center align-center'>
-                <h4 className='font-bold'>Über</h4>
-                <div className='text-xs'>
-                    <MenuItem path="/kooperation" label="Kooperation"/>
-                    <MenuItem path="/datenschutz" label="Datenschutzerklärung"/>
-                    <MenuItem path="/impressum" label="Impressum"/>
-                    <MenuItem path="/kontakt" label="Kontakt"/>
-                    <MenuItem path="/veranstaltungen" label="Veranstaltungen"/>
-                </div>
-            </div>
-            <div className='justify-center align-center'>
-                <Logo/>
-            </div>
+    <div className="border-t-2 py-10 md:px-[20vw] flex flex-col">
+      <div className="flex flex-row flex-wrap justify-between">
+        <div className="w-full md:w-auto md:flex-1 md:pr-4 text-center md:text-start">
+          <h4 className="my-4 md:my-0 px-4 font-bold">Über</h4>
+          <div className="my-10 md:my-0 text-xs">
+            <MenuItem path="/kooperation" label="Kooperation" />
+            <MenuItem path="/datenschutz" label="Datenschutzerklärung" />
+            <MenuItem path="/impressum" label="Impressum" />
+            <MenuItem path="/kontakt" label="Kontakt" />
+            <MenuItem path="/veranstaltungen" label="Veranstaltungen" />
+          </div>
         </div>
-    </Container>
+        <div className="my-10 md:my-0 w-full md:w-auto md:flex-1 md:pl-4 md:h-[180px] flex justify-center items-center">
+          <Logo />
+        </div>
+      </div>
+      <div className="my-10 md:my-0 flex py-5 justify-center opacity-50">
+        <span>© 2023 · Urheberrecht. Alle Rechte vorbehalten.</span>
+      </div>
+    </div>
   );
 }
 
-export default Footer
+export default Footer;

@@ -24,9 +24,7 @@ export default function HomeLayout({children,}: {children: React.ReactNode}) {
     <html lang="de">
       <body>
         <Navbar />
-          {/* <div className="px-20 min-w-screen-sm max-w-screen-lg"> */}
             {children}
-          {/* </div> */}
         <Footer />
       </body>
     </html>

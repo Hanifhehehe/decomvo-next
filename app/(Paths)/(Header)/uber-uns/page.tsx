@@ -6,10 +6,10 @@ function Page() {
   return (
     <div>
       <div>
-        <h1 className="text-xl font-bold text-center my-5">Über Uns</h1>
+        <h1 className="text-xl font-bold text-center">Über Uns</h1>
       </div>
       <div>
-        <h3 className="text-lg font-bold text-center my-5">
+        <h3 className="text-md font-bold text-center my-5">
           Wer sind DeComVo?
         </h3>
         <p>
@@ -31,7 +31,7 @@ function Page() {
         </p>
       </div>
       <div>
-        <h3 className="text-lg font-bold text-center my-5">Warum wir?</h3>
+        <h3 className="text-md font-bold text-center my-5">Warum wir?</h3>
         <p>
           Die offensichtliche Ungerechtigkeit der ungehörten und nicht
           berücksichtigten Stimmen hat uns dazu motiviert, unser Privileg, an
@@ -46,7 +46,7 @@ function Page() {
         </p>
       </div>
       <div>
-        <h3 className="text-lg font-bold text-center my-5">Was wollen wir?</h3>
+        <h3 className="text-md font-bold text-center my-5">Was wollen wir?</h3>
         <p>
           Wir wollen mittels Sensibilisierungs- und Aufklärungs-arbeit auf noch
           bestende koloniale Strukturen hin-weisen und deren Problematiken

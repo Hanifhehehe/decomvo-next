@@ -20,5 +20,5 @@ export async function GET(request: Request) {
     
     // console.log(query.results[0])
     //@ts-ignore
-    return NextResponse.json(notionPagesTitle)
+    return NextResponse.json(notionPages[1])
 }
