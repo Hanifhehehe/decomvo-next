@@ -19,7 +19,8 @@ function Footer() {
           <Logo />
         </div>
       </div>
-      <div className="my-10 md:my-0 flex py-5 justify-center opacity-50">
+      <hr className="mt-4" />
+      <div className="my-10 md:my-0 flex py-5 justify-center opacity-30">
         <span>© 2023 · Urheberrecht. Alle Rechte vorbehalten.</span>
       </div>
     </div>
