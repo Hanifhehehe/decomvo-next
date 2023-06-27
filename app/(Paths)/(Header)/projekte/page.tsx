@@ -1,4 +1,4 @@
-import { getProjekte } from "@/app/libs/notion";
+import { getProjekte } from "@/app/actions/getManyPages";
 
 export const metadata = {
   title: "Projekte",
@@ -8,10 +8,9 @@ async function Page() {
   const getPosts = await getProjekte();
   const articles = getPosts.results;
 
-  console.log(articles[0]);
   return (
     <div>
-      <h1 className="font-bold text-center mb-8">{metadata.title}</h1>
+      <h1 className="font-bold text-center text-2xl mb-8">{metadata.title}</h1>
       <div className="grid grid-cols-1 gap-4">
         {articles.map((article: any) => (
           <div key={article.id} className="p-4 bg-white rounded-lg shadow-md">
@@ -22,7 +21,7 @@ async function Page() {
               {article.properties.Name.title[0].text.content}
             </p>
             <a
-              href={article.properties.Name.title[0].text.content}
+              href={`/beitrage/${article.properties.Name.title[0].text.content}_${article.id}`}
               className="text-primary hover:text-primary-dark"
             >
               {article.properties.Name.title[0].text.content}
